@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-sky-200">
+    <div class="m-5 p-5">
+        <form action="/" method="post">
+            <label for="">URL</label>
+            <input class="border-4 border-sky-500 rounded-md" type="text" name="url" id="url" placeholder="Put your url here">
+            <input type="submit" class="border-2 border-grey-100 rounded-md w-20 bg-green-700 text-white">
+        </form>
+    </div>
+    <% if (img_src) { %>
+        <div class=" w-64 p-5   ">
+            <img src="/<%= img_src %>" alt="QR Code">
+        </div>
+        <% } %>
+
+    <div><a href="/download?file_path=<%= img_src %>"> Download</a></div>
+</body>
+</html>
